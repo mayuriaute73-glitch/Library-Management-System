@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library Management System</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e6f2ff;
+    }
+
+    header {
+      background-color: #3399ff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #cce6ff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 15px;
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      width: 220px;
+      padding: 20px;
+      margin: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #3399ff;
+    }
+
+    .card button {
+      padding: 10px;
+      border: none;
+      background-color: #3399ff;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .card button:hover {
+      background-color: #0073e6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    📚 Library Management System
+  </header>
+
+  <nav>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- Users -->
+    <div class="card">
+      <h3>👤 Users</h3>
+      <p>Manage library users</p>
+      <button type="button" onclick="window.location.href='users.html'">Open</button>
+    </div>
+
+    <!-- Books -->
+    <div class="card">
+      <h3>📚 Books</h3>
+      <p>View and manage books</p>
+      <button type="button" onclick="window.location.href='books.html'">Open</button>
+    </div>
+
+    <!-- Issued Books -->
+    <div class="card">
+      <h3>🔁 Issued Books</h3>
+      <p>Track issued books</p>
+      <button type="button" onclick="window.location.href='issued.html'">Open</button>
+    </div>
+
+    <!-- Fine Management -->
+    <div class="card">
+      <h3>💰 Fine Management</h3>
+      <p>Manage fines</p>
+      <button type="button" onclick="window.location.href='fine.html'">Open</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

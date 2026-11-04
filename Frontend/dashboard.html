@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard - Library System</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e6f2ff;
+    }
+
+    header {
+      background-color: #3399ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logout-btn {
+      background-color: white;
+      color: #3399ff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .logout-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    nav {
+      background-color: #cce6ff;
+      padding: 15px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #99ccff;
+      color: #000;
+    }
+
+    .container {
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      width: 250px;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h3 {
+      color: #3399ff;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .card button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #3399ff;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .card button:hover {
+      background-color: #0073e6;
+    }
+
+    #books {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      margin: 20px;
+    }
+
+    .book-item {
+      padding: 10px;
+      border-bottom: 1px solid #e6f2ff;
+    }
+
+    .book-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    📚 Library Dashboard
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </header>
+
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="users.html">Users</a>
+    <a href="books.html">Books</a>
+    <a href="issued.html">Issued Books</a>
+    <a href="fine.html">Fine Management</a>
+  </nav>
+
+  <div class="container">
+    <!-- Quick Stats -->
+    <div class="card">
+      <h3>📚 Total Books</h3>
+      <p id="totalBooks">Loading...</p>
+      <button onclick="window.location.href='books.html'">Manage</button>
+    </div>
+
+    <div class="card">
+      <h3>👤 Total Users</h3>
+      <p id="totalUsers">Loading...</p>
+      <button onclick="window.location.href='users.html'">Manage</button>
+    </div>
+
+    <div class="card">
+      <h3>🔁 Books Issued</h3>
+      <p id="totalIssued">Loading...</p>
+      <button onclick="window.location.href='issued.html'">View</button>
+    </div>
+
+    <div class="card">
+      <h3>💰 Pending Fines</h3>
+      <p id="totalFines">Loading...</p>
+      <button onclick="window.location.href='fine.html'">Manage</button>
+    </div>
+  </div>
+
+  <div id="books" style="display: none;">
+    <h2>📚 Recent Books</h2>
+    <div id="booksList"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Load dashboard data
+    function loadDashboard() {
+      loadBooks();
+    }
+
+    window.onload = loadDashboard;
+  </script>
+</body>
+</html>

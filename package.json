@@ -1,0 +1,28 @@
+{
+  "name": "library_system",
+  "version": "1.0.0",
+  "description": "a library mangement backend ",
+  "homepage": "https://github.com/mayuriaute73-glitch/LIBRARY_SYSTEM#readme",
+  "bugs": {
+    "url": "https://github.com/mayuriaute73-glitch/LIBRARY_SYSTEM/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayuriaute73-glitch/LIBRARY_SYSTEM.git"
+  },
+  "license": "ISC",
+  "author": "Mayuri",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.22.2",
+    "nodemon": "^3.1.14"
+  }
+}
